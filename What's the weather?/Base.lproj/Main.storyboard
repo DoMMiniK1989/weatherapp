@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="What_s_the_weather_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="QCl-Ht-025">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" placeholder="Search your city here.." translucent="NO" backgroundImage="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="FD6-DE-UAA">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for a city" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRG-Vs-hhz">
+                                <rect key="frame" x="47" y="85" width="281" height="40.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jhw-HB-Qmq">
+                                <rect key="frame" x="47" y="133" width="281" height="34.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ly5-0D-Rdt">
+                                <rect key="frame" x="148" y="175" width="79" height="41"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hBd-wT-Ecs">
+                                <rect key="frame" x="16" y="253.5" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Contry"/>
+                                    <segment title="Wind speed"/>
+                                    <segment title="Air pressure"/>
+                                    <segment title="W. Direction"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="YPk-Sm-eTc"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBn-d0-QpV">
+                                <rect key="frame" x="16" y="305.5" width="343" height="41"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bhr-Zr-JIX">
+                                <rect key="frame" x="235" y="165" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="59W-3j-6kU"/>
+                                    <constraint firstAttribute="height" constant="65" id="bKl-C0-qz4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KRG-Vs-hhz" secondAttribute="trailing" constant="31" id="2ol-Hk-yKz"/>
+                            <constraint firstItem="Jhw-HB-Qmq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Dz-Fd-BDH"/>
+                            <constraint firstItem="FD6-DE-UAA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Lg-vt-6NN"/>
+                            <constraint firstItem="QCl-Ht-025" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="78V-dX-bUP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QCl-Ht-025" secondAttribute="bottom" id="Dg8-7P-hPi"/>
+                            <constraint firstItem="hBd-wT-Ecs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ESS-BP-KAD"/>
+                            <constraint firstItem="KRG-Vs-hhz" firstAttribute="top" secondItem="FD6-DE-UAA" secondAttribute="bottom" constant="21" id="HGp-L9-ynz"/>
+                            <constraint firstItem="mBn-d0-QpV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HNO-m7-Ucy"/>
+                            <constraint firstItem="Ly5-0D-Rdt" firstAttribute="top" secondItem="Jhw-HB-Qmq" secondAttribute="bottom" constant="7.5" id="ICB-Ku-Vms"/>
+                            <constraint firstItem="mBn-d0-QpV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJS-yg-Vmc"/>
+                            <constraint firstItem="bhr-Zr-JIX" firstAttribute="centerY" secondItem="Ly5-0D-Rdt" secondAttribute="centerY" constant="2" id="KPQ-Zw-Fkd"/>
+                            <constraint firstItem="KRG-Vs-hhz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qc2-Rs-jjN"/>
+                            <constraint firstItem="mBn-d0-QpV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="R1c-WC-1nY"/>
+                            <constraint firstItem="hBd-wT-Ecs" firstAttribute="top" secondItem="bhr-Zr-JIX" secondAttribute="bottom" constant="23.5" id="Sfu-HX-3Hj"/>
+                            <constraint firstItem="Jhw-HB-Qmq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="Sy9-YN-AT3"/>
+                            <constraint firstItem="hBd-wT-Ecs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TE9-2D-ZfD"/>
+                            <constraint firstItem="hBd-wT-Ecs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UQ8-Gp-rau"/>
+                            <constraint firstItem="bhr-Zr-JIX" firstAttribute="leading" secondItem="Ly5-0D-Rdt" secondAttribute="trailing" constant="8" id="Uub-bj-YIe"/>
+                            <constraint firstItem="KRG-Vs-hhz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="ain-om-MVd"/>
+                            <constraint firstItem="Ly5-0D-Rdt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dK0-54-zDg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ly5-0D-Rdt" secondAttribute="trailing" constant="132" id="e7m-3e-k1m"/>
+                            <constraint firstItem="QCl-Ht-025" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="erU-zx-xTl"/>
+                            <constraint firstAttribute="trailing" secondItem="FD6-DE-UAA" secondAttribute="trailing" id="jHM-GZ-lwV"/>
+                            <constraint firstItem="Jhw-HB-Qmq" firstAttribute="top" secondItem="KRG-Vs-hhz" secondAttribute="bottom" constant="8" id="jQD-pB-1J1"/>
+                            <constraint firstItem="mBn-d0-QpV" firstAttribute="top" secondItem="hBd-wT-Ecs" secondAttribute="bottom" constant="24" id="k3a-7t-BM8"/>
+                            <constraint firstItem="Ly5-0D-Rdt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="132" id="pS2-yG-EMO"/>
+                            <constraint firstItem="FD6-DE-UAA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sRs-BM-uXj"/>
+                            <constraint firstAttribute="trailing" secondItem="QCl-Ht-025" secondAttribute="trailing" id="tx7-Fz-iay"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jhw-HB-Qmq" secondAttribute="trailing" constant="31" id="vd8-LK-dXb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityLbl" destination="KRG-Vs-hhz" id="Zk4-yt-Nft"/>
+                        <outlet property="conditionLbl" destination="Jhw-HB-Qmq" id="a7q-YO-Tl2"/>
+                        <outlet property="degreeLbl" destination="Ly5-0D-Rdt" id="8pF-Gy-Ecg"/>
+                        <outlet property="imgView" destination="bhr-Zr-JIX" id="eq5-8T-csN"/>
+                        <outlet property="mySegment" destination="hBd-wT-Ecs" id="7lq-X0-w5q"/>
+                        <outlet property="searchBar" destination="FD6-DE-UAA" id="7fz-ve-xI7"/>
+                        <outlet property="segmentResultLbl" destination="mBn-d0-QpV" id="Sy2-D2-Fwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.59999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sunset" width="733" height="1100"/>
+    </resources>
+</document>
